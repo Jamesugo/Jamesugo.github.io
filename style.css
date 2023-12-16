@@ -10,7 +10,7 @@ header {
    display: flex;
    padding: 20px 15px;
    gap: 20%;
-   background-color: black;
+   background-color: rgba(0, 0, 0, 0.864);
    position: fixed;
 }
 
@@ -20,7 +20,7 @@ header ul {
    gap: 50px;
 }
 
-  
+
 
 header a {
    text-decoration: none;
@@ -173,8 +173,8 @@ header span {
 }
 
 #project #box1 img {
-   height: 300px;
-   width: 300px;
+   height: 400px;
+   width: 400px;
 }
 
 #project p {
@@ -278,3 +278,8 @@ header nav a {
 .font a i{
    color: rgb(17, 0, 255);
 }
+
+
+
+
+
