@@ -95,7 +95,7 @@ header span {
 }
 
 #about h2 {
-   margin-left: 19%;
+   margin-left: 5%;
    padding: 10px;
 }
 
@@ -160,6 +160,7 @@ header span {
 #project {
    display: grid;
    height: 30%;
+   width: 100%;
    background-color: #000000f7;
    padding-left: 5rem;
    border: 1px 1px rgba(0, 0, 0, 0.5);
@@ -206,6 +207,7 @@ p,
    display: grid;
    background-color: #000;
    padding-top: 5rem;
+   width: 100%;
 }
 
 #contact .content {
@@ -237,11 +239,11 @@ p,
 
 .form input {
    height: 30px;
-   background-color: #000;
+   background-color: #fff;
 }
 
 .form textarea {
-   background-color: #000;
+   background-color:#000;
 }
 
 .form textarea,input {
@@ -281,5 +283,45 @@ header nav a {
 
 
 
+/* ------------------------Media quary------------------------------- */
 
+@media screen and (max-width: 995px) {
+   #home{
+      display: grid;
+   }
+   #home img{
+      margin: auto;
+      padding-top: 30px;
+   }
 
+   #project #box1 img{
+      padding: 10px;
+   }
+   
+}
+@media screen and (max-width:930px) {
+   #project {
+      padding: 3rem;
+   }
+   #project #box1{
+      padding: 30px;
+   }
+  
+}
+@media screen and (max-width: 880px){
+   #project {
+      padding: 1.5rem;
+   }
+   #project #box1{
+      padding: 15px;
+   }
+}
+@media screen and (max-width:840px) {
+   #project #box1{
+      display: grid;
+   }
+   .work{
+     display: flex;
+     flex-wrap: wrap;
+   }
+}
