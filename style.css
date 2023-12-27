@@ -243,7 +243,7 @@ p,
 }
 
 .form textarea {
-   background-color:#000;
+   background-color:#fff;
 }
 
 .form textarea,input {
@@ -335,7 +335,27 @@ header nav a {
    .work{
       display: flex;
       flex-wrap: wrap;
-      width:0%;
+      width:30%;
+      margin: auto;
+      padding-top: 50px;
+    }
+    #project #box1 img{
+      padding: 10px;
+      width: 300px;
+      height: 300px;
+   }
+   .form{
+      margin-right: 10px;
+   }
+   #home{
+      padding-top: 100px;
+   }
+}
+@media screen and (max-width:640px){
+   .work{
+      display: flex;
+      flex-wrap: wrap;
+      /* width: ; */
       margin: auto;
       padding-top: 50px;
     }
