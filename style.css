@@ -323,5 +323,20 @@ header nav a {
    .work{
      display: flex;
      flex-wrap: wrap;
+     width:50%;
+     margin: auto;
+     padding-top: 50px;
    }
+   #skill p{
+      margin: auto;
+   }
+}
+@media screen and (max-width:750px){
+   .work{
+      display: flex;
+      flex-wrap: wrap;
+      width:0%;
+      margin: auto;
+      padding-top: 50px;
+    }
 }
