@@ -292,10 +292,13 @@ header nav a {
    #home img{
       margin: auto;
       padding-top: 30px;
+     
    }
 
    #project #box1 img{
       padding: 10px;
+      width: 300px;
+      height: 300px;
    }
    
 }
@@ -306,7 +309,10 @@ header nav a {
    #project #box1{
       padding: 30px;
    }
-  
+  #contact .content{
+   display: grid;
+   
+  }
 }
 @media screen and (max-width: 880px){
    #project {
@@ -339,11 +345,7 @@ header nav a {
       margin: auto;
       padding-top: 50px;
     }
-    #project #box1 img{
-      padding: 10px;
-      width: 200px;
-      height: 200px;
-   }
+   
    .form{
       margin-right: 30px;
       /* width: 20%; */
@@ -351,9 +353,11 @@ header nav a {
    #home{
       padding-top: 100px;
    }
+  
    #about p{
       margin: auto;
    }
+
   
 }
 @media screen and (max-width:640px){
@@ -365,4 +369,10 @@ header nav a {
       padding-top: 50px;
     }
    
+}
+@media screen and (max-width:499px){
+   #home img{
+      width: 300px;
+      height: 300px;
+   }
 }
