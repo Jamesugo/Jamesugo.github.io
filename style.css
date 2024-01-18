@@ -309,10 +309,6 @@ header nav a {
    #project #box1{
       padding: 30px;
    }
-  #contact .content{
-   display: grid;
-   
-  }
 }
 @media screen and (max-width: 880px){
    #project {
@@ -336,6 +332,13 @@ header nav a {
    #skill p{
       margin: auto;
    }
+   #contact .content .font{
+      width: 20%;
+   
+     }
+    #contact .form{
+      margin-right: 30px;
+    }
 }
 @media screen and (max-width:750px){
    .work{
