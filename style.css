@@ -10,20 +10,51 @@ header {
    display: flex;
    padding: 20px 15px;
    gap: 20%;
-   background-color: rgba(0, 0, 0, 0.864);
+   background-color: #0082e6;
    position: fixed;
 }
 
-header ul {
-   display: flex;
-   list-style-type: none;
-   gap: 50px;
+nav ul {
+  float: right;
+  margin-right: 20px;
+  list-style-type: none;
+}
+nav ul li{
+   display: inline-block;
+   line-height: 50px;
+   margin: 0 5px;
 }
 
-
+header nav a {
+   color: #fff;
+   font-size: 17px;
+   padding: 7px 13px;
+   border-radius: 3px;
+}
+a.active, a:hover{
+   background-color: #1b9bff;
+   transition: .5s;
+}
 
 header a {
    text-decoration: none;
+}
+header h3{
+   font-size: 30px;
+   line-height: 50px;
+}
+.checkbtn{
+   font-size: 30px;
+   color: white;
+   float: right;
+   line-height: 50px;
+   margin-right: 40px;
+   cursor: pointer;
+   display: none;
+}
+#check{
+   display: none;
+
 }
 
 h3,
@@ -33,17 +64,15 @@ p {
    color: white;
 }
 
-header span {
-   color: rgba(127, 255, 212);
-}
+
 
 /*----------------------------------HOME--------------------------------------- */
 
 #home {
    display: flex;
-   padding-top: 5%;
+   padding-top: 10%;
    width: 100%;
-   background-color: #000000f7;
+   background-color: #2c3e50;
 
 }
 
@@ -74,10 +103,10 @@ header span {
    display: flex;
    padding-top: 10%;
    width: 100%;
-   background-color: black;
+   background-color: #2c3e50;
 }
 
- /* #about img {
+/* #about img {
    width: 40%;
    height: 400px;
    margin-right: 20% ; 
@@ -99,11 +128,13 @@ header span {
    padding: 10px;
 }
 
+
+
 /* ---------------------------------SKILLS---------------------- */
 #skill {
    display: grid;
    height: 30%;
-   background-color: black;
+   background-color: #2c3e50;
    padding-top: 10rem;
 }
 
@@ -115,13 +146,15 @@ header span {
    width: 200px;
    padding-left: 5rem;
    padding-bottom: 20px;
-   background-color: #000000f7;
+   background-color: #2c3e50;
    box-shadow: rgba(0, 0, 0, 0.5);
 }
-#skill .work{
+
+#skill .work {
    display: flex;
 }
-#skill .work i{
+
+#skill .work i {
    color: rgba(255, 42, 0, 0.788);
    font-size: 50px;
 }
@@ -138,7 +171,7 @@ header span {
 }
 
 .down {
-   background-color: #000;
+   background-color: #2c3e50;
    padding: 50px;
    padding-left: 50px;
 }
@@ -161,7 +194,7 @@ header span {
    display: grid;
    height: 30%;
    width: 100%;
-   background-color: #000000f7;
+   background-color: #2c3e50;
    padding-left: 5rem;
    border: 1px 1px rgba(0, 0, 0, 0.5);
    padding-top: 5em;
@@ -205,7 +238,7 @@ p,
 /* ----------------------------------------------------Contact----------------------------------------------- */
 #contact {
    display: grid;
-   background-color: #000;
+   background-color: #2c3e50;
    padding-top: 5rem;
    width: 100%;
 }
@@ -243,10 +276,11 @@ p,
 }
 
 .form textarea {
-   background-color:#fff;
+   background-color: #fff;
 }
 
-.form textarea,input {
+.form textarea,
+input {
    border: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
@@ -254,16 +288,7 @@ p,
    width: 100px;
    height: 50px;
    border-radius: 10px;
-   background-color: rgba(127, 255, 212);
-
-}
-
-header nav a {
-   height: 50px;
-   background-color: rgba(127, 255, 212);
-   border-radius: 5px;
-   font-size: 20px;
-
+   background-color: #2c3e50;
 }
 
 .font span {
@@ -277,7 +302,7 @@ header nav a {
    font-size: 30px;
 }
 
-.font a i{
+.font a i {
    color: rgb(17, 0, 255);
 }
 
@@ -286,96 +311,143 @@ header nav a {
 /* ------------------------Media quary------------------------------- */
 
 @media screen and (max-width: 995px) {
-   #home{
+   #home {
       display: grid;
    }
-   #home img{
+
+   #home img {
       margin: auto;
       padding-top: 30px;
-     
+
    }
 
-   #project #box1 img{
+   #project #box1 img {
       padding: 10px;
       width: 300px;
       height: 300px;
    }
-   
+
+
+
 }
+
 @media screen and (max-width:930px) {
    #project {
       padding: 3rem;
    }
-   #project #box1{
+
+   #project #box1 {
       padding: 30px;
    }
+   header nav a{
+      font-size: 16px;
+   }
+  
 }
-@media screen and (max-width: 880px){
+
+@media screen and (max-width: 880px) {
    #project {
       padding: 1.5rem;
    }
-   #project #box1{
+
+   #project #box1 {
       padding: 15px;
    }
+   .checkbtn{
+      display: block;
+   }
+   nav ul{
+      position: fixed;
+      width: 70%;
+      height: 70vh;
+      background-color: #2c3e50;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+   }
+   nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+   }
+   nav ul a{
+      font-size: 20px;
+   }
+   a:hover,a.active{
+      background: none;
+      color: #0082e6;
+   }
+   #check:checked ~ ul{
+      left: 0;
+   }
+
+   #skill .work {
+    width: 100%;
+   }
 }
+
 @media screen and (max-width:840px) {
-   #project #box1{
+   #project #box1 {
       display: grid;
    }
-   .work{
-     display: flex;
-     flex-wrap: wrap;
-     width:50%;
-     margin: auto;
-     padding-top: 50px;
-   }
-   #skill p{
-      margin: auto;
-   }
-   #contact .content .font{
-      width: 20%;
+
    
-     }
-    #contact .form{
-      margin-right: 30px;
-    }
-}
-@media screen and (max-width:750px){
-   .work{
-      display: flex;
-      flex-wrap: wrap;
-      width:30%;
-      margin: auto;
-      padding-top: 50px;
-    }
-   
-   .form{
-      margin-right: 30px;
-      /* width: 20%; */
-   }
-   #home{
-      padding-top: 100px;
-   }
-  
-   #about p{
+
+   #skill p {
       margin: auto;
    }
 
-  
-}
-@media screen and (max-width:640px){
-   .work{
-      display: flex;
+   #contact .content .font {
+      width: 20%;
+
+   }
+
+   #contact .form {
+      margin-right: 30px;
+   }
+   #skill .work div{
+      padding: 0;
+      justify-content: space-between;
+      display: block;
       flex-wrap: wrap;
-      /* width: ; */
-      margin: auto;
-      padding-top: 50px;
-    }
-   
+      width: 50%;
+      padding-right: -200px;
+
+   }
+   .work{
+      padding-left: 50px;
+   }
 }
-@media screen and (max-width:499px){
-   #home img{
+
+@media screen and (max-width:750px) {
+   
+
+   .form {
+      margin-right: 30px;
+      /* width: 20%; */
+   }
+
+   #home {
+      padding-top: 100px;
+   }
+
+   #about p {
+      margin: auto;
+   }
+
+
+}
+
+
+
+
+@media screen and (max-width:499px) {
+   #home img {
       width: 300px;
       height: 300px;
+   }
+   #home{
+      padding-top: 200px;
    }
 }
