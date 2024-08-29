@@ -5,6 +5,10 @@
    scroll-behavior: smooth;
 }
 
+body {
+   background-color: #2c3e50;
+}
+
 header {
    width: 100%;
    display: flex;
@@ -12,14 +16,16 @@ header {
    gap: 20%;
    background-color: #0082e6;
    position: fixed;
+   z-index: 1;
 }
 
 nav ul {
-  float: right;
-  margin-right: 20px;
-  list-style-type: none;
+   float: right;
+   margin-right: 20px;
+   list-style-type: none;
 }
-nav ul li{
+
+nav ul li {
    display: inline-block;
    line-height: 50px;
    margin: 0 5px;
@@ -31,7 +37,9 @@ header nav a {
    padding: 7px 13px;
    border-radius: 3px;
 }
-a.active, a:hover{
+
+a.active,
+a:hover {
    background-color: #1b9bff;
    transition: .5s;
 }
@@ -39,11 +47,13 @@ a.active, a:hover{
 header a {
    text-decoration: none;
 }
-header h3{
+
+header h3 {
    font-size: 30px;
    line-height: 50px;
 }
-.checkbtn{
+
+.checkbtn {
    font-size: 30px;
    color: white;
    float: right;
@@ -52,7 +62,8 @@ header h3{
    cursor: pointer;
    display: none;
 }
-#check{
+
+#check {
    display: none;
 
 }
@@ -73,30 +84,26 @@ p {
    padding-top: 10%;
    height: auto;
    width: 100%;
-   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./image/IMG_0314.jpeg);
-   background-size: 50% auto;
-   background-position: right -20px center;
-   background-repeat: no-repeat;
-   background-color: #2c3e50;
+   justify-content: space-between;
+
 }
 
 
-/* #home img {
-   width: 25%;
-   height: 400px;
-   margin-left: 50%;
-   border-radius: 50%;
-   margin-bottom: 50px;
-   margin-right: 30px;
-} */
+#home img {
+   width: 50rem;
+   height: 60vh;
+   margin: 5px 20px;
+}
 
-#fam{
+#fam {
    padding-top: 350px;
    margin-right: 50px;
-   width: 10%;
+   width: fit-content;
+   /*background-color: #0082e6;*/
 }
-#fam i{
-   padding: 3px;
+
+#fam i {
+   padding: 10px;
 }
 
 #home p {
@@ -119,15 +126,9 @@ p {
    display: flex;
    padding-top: 10%;
    width: 100%;
-   background-color: #2c3e50;
 }
 
-/* #about img {
-   width: 40%;
-   height: 400px;
-   margin-right: 20% ; 
-   padding: 5px 50px; 
-}  */
+
 
 #about p {
    margin-left: 15%;
@@ -147,33 +148,87 @@ p {
 
 
 /* ---------------------------------SKILLS---------------------- */
-#skill {
-   display: grid;
-   height: 30%;
-   background-color: #2c3e50;
-   padding-top: 10rem;
+#skill{
+   font-family: 'Gill Sans',  sans-serif;
+   list-style-type: none;
+}
+#skill h2{
+text-align: center;
+}
+#skill h3{
+   margin: 5px;
+}
+.work{
+   width: 500px;
+   margin: 60px auto;
+   padding: 20px;
+   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.work li{
+   margin: 20px 0;
+   padding: 10px;
+}
+.bar{
+   background: #353b48;
+   display: block;
+   height: 20px;
+   border: 1px solid rgba(0, 0, 0, 0.5);
+   border-radius: 10px;
+   overflow: hidden;
+   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+   transition: all 0.3s cubic-bezier(.25,8,.25,1);
+}
+.bar:hover{
+   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.bar span{
+   height: 20px;
+   float: left;
+   background: linear-gradient(135deg, rgba(236,0,140,1)0%, rgba(252,103,103,1)100%);
+}
+.html{
+   width: 90%;
+   animation: html 3s;
+}
+.css{
+   width: 70%;
+   animation: css 3s;
+}
+.version{
+   width: 50%;
+   animation: version 3s;
 }
 
-#skill nav {
-   padding: 30px;
+@keyframes html{
+   0%{
+      width: 0%;
+   }
+   100%{
+      width: 90%;
+   }
+}
+@keyframes css{
+   0%{
+      width: 0%;
+   }
+   100%{
+      width: 70%;
+   }
+}
+@keyframes version{
+   0%{
+      width: 0%;
+   }
+   100%{
+      width: 50%;
+   }
 }
 
-#skill .work div {
-   width: 200px;
-   padding-left: 5rem;
-   padding-bottom: 20px;
-   background-color: #2c3e50;
-   box-shadow: rgba(0, 0, 0, 0.5);
-}
-
-#skill .work {
-   display: flex;
-}
-
-#skill .work i {
-   color: rgba(255, 42, 0, 0.788);
-   font-size: 50px;
-}
+/* --------------------------------------------------------------- */
+/* #number{
+   font-weight: 600;
+   color: #fff;
+} */
 
 #skill p {
    padding-bottom: 10px;
@@ -327,9 +382,9 @@ input {
 /* ------------------------Media quary------------------------------- */
 
 @media screen and (max-width: 995px) {
-   #home {
+   /* #home {
       display: grid;
-   }
+   } */
 
    #home img {
       margin: auto;
@@ -355,10 +410,11 @@ input {
    #project #box1 {
       padding: 30px;
    }
-   header nav a{
+
+   header nav a {
       font-size: 16px;
    }
-  
+
 }
 
 @media screen and (max-width: 880px) {
@@ -369,10 +425,16 @@ input {
    #project #box1 {
       padding: 15px;
    }
-   .checkbtn{
+   header{
+      display: flex;
+      justify-content: space-between;
+   }
+
+   .checkbtn {
       display: block;
    }
-   nav ul{
+
+   nav ul {
       position: fixed;
       width: 70%;
       height: 70vh;
@@ -382,40 +444,47 @@ input {
       text-align: center;
       transition: all .5s;
    }
-   nav ul li{
+
+   nav ul li {
       display: block;
       margin: 50px 0;
       line-height: 30px;
    }
-   nav ul a{
+
+   nav ul a {
       font-size: 20px;
    }
-   a:hover,a.active{
+
+   a:hover,
+   a.active {
       background: none;
       color: #0082e6;
    }
-   #check:checked ~ ul{
+
+   #check:checked~ul {
       left: 0;
    }
 
    #skill .work {
-    width: 100%;
+      width: 100%;
    }
-   #fam{
+
+   #fam {
       display: flex;
       justify-content: center;
       margin-right: 70px;
       float: left;
    }
-   #fam div i{
+
+   #fam div i {
       padding: 10px;
    }
+
    #home {
       display: flex;
       padding-top: 10%;
       height: auto;
       width: 100%;
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(./image/IMG_0314.jpeg);
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
@@ -428,7 +497,7 @@ input {
       display: grid;
    }
 
-   
+
 
    #skill p {
       margin: auto;
@@ -442,7 +511,8 @@ input {
    #contact .form {
       margin-right: 30px;
    }
-   #skill .work div{
+
+   #skill .work div {
       padding: 0;
       justify-content: space-between;
       display: block;
@@ -451,13 +521,22 @@ input {
       padding-right: -200px;
 
    }
-   .work{
+
+   .work {
       padding-left: 50px;
+   }
+
+   .text {
+      margin-top: 10rem;
+   }
+
+   .fam {
+      margin-right: 10rem;
    }
 }
 
 @media screen and (max-width:750px) {
-   
+
 
    .form {
       margin-right: 30px;
@@ -483,7 +562,8 @@ input {
       width: 300px;
       height: 300px;
    }
-   #home{
+
+   #home {
       padding-top: 200px;
    }
 }
