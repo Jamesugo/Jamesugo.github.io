@@ -85,7 +85,6 @@ p {
    height: auto;
    width: 100%;
    justify-content: space-between;
-
 }
 
 
@@ -99,27 +98,28 @@ p {
    padding-top: 350px;
    margin-right: 50px;
    width: fit-content;
-   /*background-color: #0082e6;*/
 }
 
 #fam i {
    padding: 10px;
 }
 
-#home p {
-   /* width: 50%; */
-   margin-left: 7%;
-}
+
 
 #home h3 {
    padding: 20px;
    margin-left: 5%;
    color: white;
+   font-size: 25px;
+   animation: color 2s linear reverse;
 }
 
 #home h2 {
    margin-left: 7%;
+   font-size: 30px;
+  
 }
+
 
 /* ------------------------------------ABOUT-------------------------------------- */
 #about {
@@ -382,15 +382,20 @@ input {
 /* ------------------------Media quary------------------------------- */
 
 @media screen and (max-width: 995px) {
-   /* #home {
-      display: grid;
-   } */
-
-   #home img {
-      margin: auto;
-      padding-top: 30px;
-
+   #home {
+      display: flex;
+      padding-top: 10%;
+      height: auto;
+      width: 100%;
+      background:linear-gradient(rgba(0, 0, 0, 0.344),rgba(11, 0, 50, 0.342)), url(./image/IMG_0314.jpeg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding-top: -30px;
    }
+   #home img{
+      display: none;
+     }
 
    #project #box1 img {
       padding: 10px;
@@ -398,6 +403,9 @@ input {
       height: 300px;
    }
 
+   #home h2{
+      padding-top: 100px;
+   }
 
 
 }
@@ -479,17 +487,9 @@ input {
    #fam div i {
       padding: 10px;
    }
+   
 
-   #home {
-      display: flex;
-      padding-top: 10%;
-      height: auto;
-      width: 100%;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      /* background-color: #2c3e50; */
-   }
+ 
 }
 
 @media screen and (max-width:840px) {
